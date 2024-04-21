@@ -2,37 +2,93 @@
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
+@keyframes enterAnimation1 {
+  0% {
+    transform: translateX(-50px);
+    opacity: 0.3;
+  }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+  100% {
+    transform: translateX(0px);
+    opacity: 1;
   }
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+@keyframes enterAnimation2 {
+  0% {
+    transform: translateY(-50px);
+    opacity: 0.3;
+  }
+
+  100% {
+    transform: translateY(0px);
+    opacity: 1;
+  }
 }
 
-.App-link {
-  color: #61dafb;
+@keyframes enterAnimation3 {
+  0% {
+    transform: translateY(50px);
+    opacity: 0.3;
+  }
+
+  100% {
+    transform: translateY(0px);
+    opacity: 1;
+  }
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+@keyframes enterAnimation4 {
+  0% {
+    transform: translateX(50px);
+    opacity: 0.3;
   }
-  to {
-    transform: rotate(360deg);
+
+  100% {
+    transform: translateX(0px);
+    opacity: 1;
   }
+}
+
+.grid_child_1 {
+  animation: enterAnimation1 2s ease;
+}
+
+.grid_child_2 {
+  animation: enterAnimation2 2s ease;
+}
+
+.grid_child_3 {
+  animation: enterAnimation3 2s ease;
+}
+
+.grid_child_4 {
+  animation: enterAnimation4 2s ease;
+}
+
+@media (width < 500px) {
+  .grid_child_2 {
+    animation: enterAnimation4 2s ease;
+  }
+  
+  .grid_child_3 {
+    animation: enterAnimation1 2s ease;
+  }
+}
+
+
+@keyframes modalAnimation {
+  0% {
+    transform: translateY(25px);
+    opacity: 0;
+  }
+
+  100% {
+    transform: translateX(0px);
+    opacity: 1;
+  }
+}
+
+.modal_popup {
+  animation: modalAnimation 0.5s ease;
 }
